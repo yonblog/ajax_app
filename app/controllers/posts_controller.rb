@@ -8,7 +8,10 @@ class PostsController < ApplicationController
   # end
 
   def create
-    Post.create(content: params[:content])
-    redirect_to action: :index
+    post = Post.create(content: params[:content])
+    # redirect_to action: :index
+    render json:{ post: post }
+           # ↑「json」は、直後に記述した（今回は「post: post」）データをJSON形式で返却することができる。
+           # ※ 上記で定義した変数postの値を、postというキーとセットでJavaScriptに送信している。
   end
 end
