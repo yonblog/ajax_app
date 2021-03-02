@@ -7,6 +7,8 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("../memo")
+      // ↑「../memo」の「..」は、一つ上の階層を意味する。
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
